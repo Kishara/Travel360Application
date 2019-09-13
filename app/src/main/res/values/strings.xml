@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Travel360</string>
+    <string name="SignintoTravel360">Sign in to Travel360</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="forgetpassword">Forget Password</string>
+    <string name="signin">Sign In</string>
+    <string name="newto">New to Travel360?</string>
+    <string name="createaccount">Create an account.</string>
+
+
+    <string name="titleSignUp">Create your personal account</string>
+    <string name="fName">First name</string>
+    <string name="lName">Last name</string>
+    <string name="uName">Username</string>
+    <string name="tel">Contact No</string>
+    <string name="pwd">Password</string>
+    <string name="rePassword">Re enter password</string>
+    <string name="btncreateacc">Create an account</string>
+
 </resources>
