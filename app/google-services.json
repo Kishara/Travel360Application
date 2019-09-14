@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "645910816550",
+    "firebase_url": "https://travel360-15f07.firebaseio.com",
+    "project_id": "travel360-15f07",
+    "storage_bucket": "travel360-15f07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645910816550:android:e2519a759593a664c583e7",
+        "android_client_info": {
+          "package_name": "com.example.travel360"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645910816550-kak5dv3hqsguge5qefo0244bq4da4v3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.travel360",
+            "certificate_hash": "7f432fed7917059452895fa109cf2f4b1108b289"
+          }
+        },
+        {
+          "client_id": "645910816550-f1pg5vrrn9878qm5lvc114605ur407cv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.travel360",
+            "certificate_hash": "a6ec6825d9bb414503bfa36063a3145e5723b2d6"
+          }
+        },
+        {
+          "client_id": "645910816550-rh3fin7h85688f0ppk1ufpjqmvg9p491.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhQlfC4SRplg4G5QHiwYB0FYGYcHepQGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645910816550-rh3fin7h85688f0ppk1ufpjqmvg9p491.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
