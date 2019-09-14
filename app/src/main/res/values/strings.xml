@@ -18,4 +18,69 @@
     <string name="rePassword">Re enter password</string>
     <string name="btncreateacc">Create an account</string>
 
+
+    <string name="cinnamon_lakeside_colombo">Cinnamon Lakeside Colombo</string>
+    <string name="shangri_la_hotel">Shangri-La Hotel</string>
+    <string name="cinnamon_grand_colombo">Cinnamon Grand Colombo</string>
+    <string name="me_colombo">Me Colombo</string>
+    <string name="galle_face_hotel">Galle face Hotel</string>
+    <string name="mandarina_colombo">Mandarina Colombo</string>
+    <string name="the_kingsbury_colombo">The Kingsbury Colombo</string>
+    <string name="taj_samudra">Taj Samudra</string>
+    <string name="view">View</string>
+    <string name="price1">LKR 9,785.00</string>
+    <string name="price2">LKR 7,281.00</string>
+    <string name="price3">LKR 8,581.00</string>
+    <string name="price4">LKR 10,928.00</string>
+    <string name="price5">LKR 12,328.00</string>
+    <string name="price6">LKR 10,928.00</string>
+    <string name="price7">LKR 10,928.00</string>
+    <string name="price8">LKR 10,928.00</string>
+    <string name="manderina_colombo1">Manderina Colombo</string>
+    <string name="rooms">Rooms</string>
+    <string name="adults">Adults</string>
+    <string name="children">Children</string>
+    <string name="book">Book</string>
+    <string name="price0">LKR 9,785.00</string>
+    <string name="info">Hotel Information</string>
+    <string name="info1">Set on a thoroughfare lined with shops and restaurants, this polished hotel is 1 km from Bambalapitiya railway station on the Laccadive Sea, and 3 km from the 19th-century Gangaramaya Temple.</string>
+    <string name="info2">Hotel class</string>
+    <string name="info3">Pool</string>
+    <string name="info4">Room Service</string>
+    <string name="info5">Airport Transportation</string>
+    <string name="info6">Restaurant</string>
+    <string name="info7">Wifi</string>
+    <string name="feedbacks">Comments</string>
+    <string name="feedback"></string>
+
+
+    <string name="breakfast">Breakfast</string>
+    <string name="brunch">Brunch</string>
+    <string name="lunch">Lunch</string>
+    <string name="coffee_and_tea">Coffee and Tea</string>
+    <string name="dinner">Dinner</string>
+    <string name="smoothies">Smoothies</string>
+    <string name="desserts">Desserts</string>
+    <string name="bars_and_pubs">Bars and Pubs</string>
+    <string name="raman_hamakaze_colombo">Raman Hamakaze Colombo</string>
+    <string name="cafe_kumbuk">Cafe Kumbuk</string>
+    <string name="graze_kitchen">Graze Kitchen</string>
+    <string name="flow">Flow</string>
+    <string name="ayu">AYU</string>
+    <string name="taprobane">Taprobane</string>
+    <string name="plus_nine_four">Plus Nine Four</string>
+    <string name="life_food">Life Food</string>
+    <string name="ramen_hamakaze_colombo">Ramen Hamakaze Colombo</string>
+    <string name="description">Description</string>
+    <string name="description1">Japanese RAMEN Noodle Restaurant in Colombo!!! Rich collagen chicken soup!!! Wonderful homemade noodle!!! Very nice Fried Chicken "KARA-AGE" and Fried Potato!!! So good Garlic Fried Rice "Cha-Han" and Curry and Rice!!!</string>
+    <string name="restaurant_info">Restaurant Info</string>
+    <string name="visit_website">Visit Website</string>
+    <string name="contact">+94115344644</string>
+    <string name="email">Email</string>
+    <string name="certificate">Certificate Of Excellence</string>
+    <string name="open_now">Open now</string>
+    <string name="location">91 Perahera Mawatha, Colombo 00002</string>
+    <string name="comments">Comments</string>
+    <string name="comment"></string>
+
 </resources>
