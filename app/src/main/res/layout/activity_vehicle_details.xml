@@ -95,7 +95,7 @@
         android:layout_marginTop="265dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/_1_bags" />
+        android:text="@string/_1_bags1" />
 
     <ImageView
         android:id="@+id/imageView20"
@@ -150,15 +150,15 @@
         android:text="@string/bookvehicle" />
 
     <TextView
-    android:id="@+id/textViewname"
-    android:layout_width="121dp"
-    android:layout_height="29dp"
-    android:layout_marginStart="25dp"
-    android:layout_marginTop="470dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginBottom="8dp"
-    android:text="@string/namere"
-    tools:ignore="HardcodedText" />
+        android:id="@+id/textViewname"
+        android:layout_width="121dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/namere"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editTextname"

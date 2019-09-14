@@ -83,4 +83,56 @@
     <string name="comments">Comments</string>
     <string name="comment"></string>
 
+
+
+    <string name="withdriver">withdriver</string>
+    <string name="withoutdriver">With outdriver</string>
+    <string name="toyota_yaris">toyota yaris</string>
+    <string name="lkr_40_per_1km">lkr 40 per 1km</string>
+    <string name="rentveiw1">Rent</string>
+    <string name="rentveiw2">Rent</string>
+    <string name="rentveiw3">Rent</string>
+    <string name="rentveiw4">Rent</string>
+    <string name="rentview5">Rent</string>
+    <string name="toyota_yaris1">toyota yaris</string>
+    <string name="rentview6">Rent</string>
+    <string name="rentveiw8">Rent</string>
+    <string name="rentview7">Rent</string>
+    <string name="toyota_aqua">toyota aqua</string>
+    <string name="lkr_45_per_1km1">lkr 45 per 1km</string>
+    <string name="susuki_alto">susuki alto</string>
+    <string name="lkr_35_per_1km1">lkr 35 per 1km</string>
+    <string name="toyota_hiace">toyota hiace</string>
+    <string name="lkr_60_per_1km">lkr 60 per 1km</string>
+    <string name="toyota_wagonr">toyota wagonr</string>
+    <string name="lkr_42_per_1km">lkr 42 per 1km</string>
+    <string name="lkr_45_per_1km">lkr 45 per 1km</string>
+    <string name="toyotaaqua1">toyota aqua</string>
+    <string name="toyota_yaris2">toyota yaris</string>
+    <string name="lkr_46_per_1km1">lkr 46 per 1km</string>
+    <string name="_4_passenger">4 passenger</string>
+    <string name="_1_bags1">1 Bags</string>
+    <string name="full_to_full">Full to full</string>
+    <string name="dis1">The Toyota Yaris is an ideal choice when needing a compact car with plenty of comfort and performance capabilities. ... Saftey Features: The Yaris is equipped with nine airbags and whiplash lessening seats.</string>
+    <string name="bookvehicle">Book vehicle</string>
+    <string name="rentId">Rent ID</string>
+    <string name="telephonrnumber1">Telephone Number</string>
+    <string name="addressre">Address</string>
+    <string name="namere">Name</string>
+    <string name="daily_bus_list">Daily bus list</string>
+    <string name="colombo">Colombo</string>
+    <string name="kandy">Kandy</string>
+    <string name="start1">Start</string>
+    <string name="reach4">Reach</string>
+    <string name="dailytrainshedule">Daily Train Shedule</string>
+    <string name="mathar">Mathara</string>
+    <string name="start6">Start</string>
+    <string name="reach10">Reach</string>
+    <string name="bus">Bus</string>
+    <string name="train">Train</string>
+    <string name="rent">Rent</string>
+    <string name="rentto">Rent To</string>
+    <string name="rentfrom">Rent Form</string>
+    <string name="renttime">Rent Time</string>
+
 </resources>
