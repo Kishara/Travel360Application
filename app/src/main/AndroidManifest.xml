@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".resturant_description"></activity>
-        <activity android:name=".resturant_list" />
-        <activity android:name=".food_list" />
-        <activity android:name=".hotel_description" />
-        <activity android:name=".hotel_list" />
+        <activity android:name=".busShedule"></activity>
+        <activity android:name=".trainShedule" />
+        <activity android:name=".vehicleDetails" />
+        <activity android:name=".rentVehicles" />
         <activity android:name=".rentform" />
         <activity android:name=".vehicleType" />
         <activity android:name=".travelItems" />
