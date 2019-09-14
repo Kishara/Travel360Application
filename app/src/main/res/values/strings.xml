@@ -135,4 +135,31 @@
     <string name="rentfrom">Rent Form</string>
     <string name="renttime">Rent Time</string>
 
+    <string name="panasonic">Panasonic Lumix LX10</string>
+    <string name="camera_price">LKR 25,200.00</string>
+    <string name="camera_info">Camara Description</string>
+    <string name="camara_des">The Panasonic Lumix DMC-LX10 (LX15 in some markets) is a 20MP large-sensor compact with a bright (F1.4-2.8), 24-72mm equivalent zoom lens. Which is to say, its a very capable pocket camera. And, being a Panasonic, it has video specs and clever video-based features to back up its stills capabilities.</string>
+
+    <string name="budgetmanager">Budget Manager</string>
+    <string name="budgettransportation">Transportation</string>
+    <string name="budgethotelsandrestaurant">Hotels and Restaurant</string>
+    <string name="budgetbillsandtickets">Bills and Tickets</string>
+    <string name="budgetfoodandbavarage">Food and Bavarage</string>
+    <string name="budgetother">Other</string>
+    <string name="budgettotal">Total</string>
+    <string name="budgetrs">Rs.</string>
+    <string name="searchhere">Search here</string>
+    <string name="travelitemscart">Cart</string>
+    <string name="travelItems">Travel Items</string>
+    <string name="travelitemsitemName">Item Name</string>
+    <string name="travelitemsitemPrice">Item Price</string>
+    <string name="travelitemsitemNo">Item No</string>
+    <string name="travelitemsupdate">UPDATE</string>
+    <string name="travelItemsTelNo">Mobile No</string>
+    <string name="travelItemsQuantity">Quantity</string>
+    <string name="travelItemsBook">BOOK</string>
+    <string name="budgetAdd">Add Budget</string>
+    <string name="budgetDelete">Delete Budget</string>
+    <string name="budgetUpdate">Update Budget</string>
+
 </resources>

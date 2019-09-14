@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+
+        android:id="@+id/Itemname"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-84dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:text="@string/travelitemsitemName" />
+
+
+    <TextView
+
+        android:id="@+id/Itemdescription"
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="283dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/Itemname"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:text="@string/camera_info" />
+
+    <TextView
+
+        android:id="@+id/Itemprice"
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="284dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Itemdescription"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@+id/imageView"
+        android:text="@string/travelitemsitemPrice" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="83dp"
+        android:layout_height="84dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"
+        app:srcCompat="@drawable/smallicon" /> />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_name">35dp</dimen>
+    <dimen name="item_price">25dp</dimen>
+    <dimen name="cameradescription">20dp</dimen>
+</resources>

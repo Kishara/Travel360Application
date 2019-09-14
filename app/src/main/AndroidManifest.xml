@@ -15,8 +15,12 @@
         <activity android:name=".rentVehicles" />
         <activity android:name=".rentform" />
         <activity android:name=".vehicleType" />
-        <activity android:name=".travelItems" />
         <activity android:name=".signUp" />
+        <activity android:name=".budgetPlan"></activity>
+        <activity android:name=".travelItemList" />
+        <activity android:name=".travelItemDescriptionUpdate" />
+        <activity android:name=".cartItemList" />
+        <activity android:name=".travelItemDescription" />
         <activity android:name=".signIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

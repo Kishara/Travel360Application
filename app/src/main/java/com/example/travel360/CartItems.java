@@ -1,7 +1,6 @@
-package model;
+package com.example.travel360;
 
 public class CartItems {
-
     String cartItemPrice;
     String cartItemId;
     String cartItemDescription;

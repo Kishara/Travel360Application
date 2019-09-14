@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cartItems">
+    tools:context=".cartItemList">
 
     <TextView
-        android:id="@+id/cartItemHeading_label"
+        android:id="@+id/cartHeading_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -16,25 +16,25 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Cart"
+        android:text="@string/travelitemscart"
         android:textColor="#555555"
-        android:textSize="24sp" />
+        android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/cartItemSearch_field"
+        android:id="@+id/travelItemsSearch_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cartItemHeading_label"
-        android:layout_alignStart="@+id/cartItemHeading_label"
+        android:layout_below="@+id/cartHeading_label"
+        android:layout_alignStart="@+id/cartHeading_label"
         android:layout_marginStart="-10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="18dp"
         android:layout_marginRight="20dp"
-        android:layout_toStartOf="@+id/cartItemSearch_btn"
+        android:layout_toStartOf="@+id/TravelItemsSearch_btn"
         android:background="@drawable/search_layout"
         android:ems="10"
         android:fontFamily="@font/nunito_semibold"
-        android:hint="Search here"
+        android:hint="@string/searchhere"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -44,11 +44,11 @@
         android:textSize="16sp" />
 
     <ImageButton
-        android:id="@+id/cartItemSearch_btn"
+        android:id="@+id/TravelItemsSearch_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/cartItemSearch_field"
-        android:layout_alignBottom="@+id/cartItemSearch_field"
+        android:layout_alignTop="@+id/travelItemsSearch_field"
+        android:layout_alignBottom="@+id/travelItemsSearch_field"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="15dp"
@@ -58,14 +58,13 @@
         app:srcCompat="@mipmap/search_button" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/TravelItemsRecycler_view"
         android:layout_width="384dp"
         android:layout_height="608dp"
-        android:layout_below="@+id/cartItemSearch_field"
-        android:layout_alignStart="@+id/recycler_view"
+        android:layout_below="@+id/travelItemsSearch_field"
+        android:layout_alignStart="@+id/TravelItemsRecycler_view"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
         android:layout_marginEnd="13dp"
         tools:ignore="MissingConstraints,NotSibling"
         tools:layout_editor_absoluteX="8dp"

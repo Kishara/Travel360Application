@@ -1,4 +1,4 @@
-package model;
+package com.example.travel360;
 
 public class TravelItems {
     String travelItemId;
