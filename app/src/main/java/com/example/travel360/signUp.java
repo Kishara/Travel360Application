@@ -90,8 +90,13 @@ public class signUp extends AppCompatActivity {
                 catch (NumberFormatException ex1){
                     Toast.makeText(getApplicationContext(),"Invalid Contact No!",Toast.LENGTH_SHORT).show();
                 }
-
+                openProfile();
                 }
+            private void openProfile(){
+                Intent intent = new Intent(signUp.this,homePage.class);
+                startActivity(intent);
+            }
+
 
         });
 
