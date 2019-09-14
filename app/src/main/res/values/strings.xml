@@ -61,7 +61,7 @@
     <string name="addressre">Address</string>
     <string name="telephonrnumber1">Telephone Number</string>
     <string name="rentId">Id</string>
-    <string name="daily_bus_list">daily_bus_list</string>
+    <string name="daily_bus_list">Daily Train List</string>
     <string name="colombo">Colombo</string>
     <string name="kandy">Kandy</string>
     <string name="start1">Start</string>
@@ -72,5 +72,17 @@
     <string name="reach3">Reach</string>
     <string name="start4">Start</string>
     <string name="reach4">Reach</string>
+    <string name="dailybusshedule">Daily Bus Shedule</string>
+    <string name="mathar">Mathar</string>
+    <string name="start6">Start</string>
+    <string name="reach6">Reach</string>
+    <string name="start7">Start</string>
+    <string name="reach7">Reach</string>
+    <string name="start8">Start</string>
+    <string name="reach8">Reach</string>
+    <string name="start9">Start</string>
+    <string name="reach9">Reach</string>
+    <string name="start10">Start</string>
+    <string name="reach10">Reach</string>
 
 </resources>
