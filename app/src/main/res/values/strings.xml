@@ -19,7 +19,6 @@
     <string name="btncreateacc">Create an account</string>
 
 
-
     <string name="bus">Bus</string>
     <string name="train">Train</string>
     <string name="rent">Rent</string>
@@ -62,5 +61,16 @@
     <string name="addressre">Address</string>
     <string name="telephonrnumber1">Telephone Number</string>
     <string name="rentId">Id</string>
+    <string name="daily_bus_list">daily_bus_list</string>
+    <string name="colombo">Colombo</string>
+    <string name="kandy">Kandy</string>
+    <string name="start1">Start</string>
+    <string name="reach1">Reach</string>
+    <string name="start2">Start</string>
+    <string name="reach2">Reach</string>
+    <string name="start3">Start</string>
+    <string name="reach3">Reach</string>
+    <string name="start4">Start</string>
+    <string name="reach4">Reach</string>
 
 </resources>
