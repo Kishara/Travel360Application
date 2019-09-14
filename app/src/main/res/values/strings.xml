@@ -17,5 +17,8 @@
     <string name="pwd">Password</string>
     <string name="rePassword">Re enter password</string>
     <string name="btncreateacc">Create an account</string>
+    <string name="bus">bus</string>
+    <string name="train">train</string>
+    <string name="rent">rent</string>
 
 </resources>

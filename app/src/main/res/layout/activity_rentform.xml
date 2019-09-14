@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rentview"
@@ -7,78 +7,62 @@
     android:layout_height="match_parent"
     tools:context=".rentform">
 
-    <TextView
-        android:id="@+id/retime"
-        android:layout_width="95dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="8dp"
-        android:text="Time"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reto"
-        app:layout_constraintVertical_bias="0.043" />
-
-    <TextView
-        android:id="@+id/reto"
-        android:layout_width="95dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="8dp"
-        android:text="To"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/refrom"
-        app:layout_constraintVertical_bias="0.038" />
-
-    <TextView
-        android:id="@+id/refrom"
-        android:layout_width="98dp"
-        android:layout_height="35dp"
-        android:text="From"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116" />
-
-    <EditText
-        android:id="@+id/reto1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
-        app:layout_constraintStart_toEndOf="@+id/reto"
-        app:layout_constraintTop_toBottomOf="@+id/refrom1" />
-
-    <EditText
-        android:id="@+id/refrom1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
-        app:layout_constraintStart_toEndOf="@+id/refrom"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:srcCompat="@drawable/bus1" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/bus" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@drawable/train1" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="View"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/train" />
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@drawable/carrent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/rent" />
+
+</RelativeLayout>
