@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import model.User;
 
@@ -22,33 +23,45 @@ public class signUp extends AppCompatActivity {
 
 
     EditText txtfname,txtlname,txtusername,txtcontact,txtpass1,txtpass2;
-    Button button1;
+    Button signUpbtn;
     DatabaseReference dbRef;
-
     User usr;
 
+    //image upload
+    private static final int PICK_IMAGE_REQUEST = 1;
+    private ImageButton mButtonChooseImage;
+    private ImageView mImageView;
+    private Uri mImageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-
-
-
-
+        mImageView = findViewById(R.id.userDp);
+        mButtonChooseImage = findViewById(R.id.addImgBtn);
         txtfname = findViewById(R.id.Fnametxt);
         txtlname = findViewById(R.id.Lnametxt);
         txtusername = findViewById(R.id.Usernametxt);
         txtcontact = findViewById(R.id.Contacttxt);
         txtpass1 = findViewById(R.id.Pass1txt);
         txtpass2 = findViewById(R.id.Pass2txt);
-        button1 = findViewById(R.id.Create);
+        signUpbtn = findViewById(R.id.Create);
         usr = new User();
 
 
+        //image upload
+        mButtonChooseImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        button1.setOnClickListener(new View.OnClickListener() {
+                openFileChooser();
+            }
+        });
+
+
+        //data insert to firebase
+        signUpbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dbRef = FirebaseDatabase.getInstance().getReference().child("User");
@@ -93,15 +106,29 @@ public class signUp extends AppCompatActivity {
         txtpass2.setText("");
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
     private void FileChooser(){
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(intent,1);
     }
+    private void openFileChooser(){
+        Intent intent = new Intent();
+        intent.setType("Image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(intent, PICK_IMAGE_REQUEST);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData()!=null){
+            mImageUri = data.getData();
+
+            Picasso.with(this).load(mImageUri).into(mImageView);
+        }
+
+    }
+
 }
