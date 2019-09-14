@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".rentform"></activity>
+        <activity android:name=".vehicleDetails"></activity>
+        <activity android:name=".rentVehicles" />
+        <activity android:name=".rentform" />
         <activity android:name=".vehicleType" />
         <activity android:name=".travelItems" />
         <activity android:name=".signUp" />

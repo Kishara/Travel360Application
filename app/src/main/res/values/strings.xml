@@ -17,8 +17,50 @@
     <string name="pwd">Password</string>
     <string name="rePassword">Re enter password</string>
     <string name="btncreateacc">Create an account</string>
-    <string name="bus">bus</string>
-    <string name="train">train</string>
-    <string name="rent">rent</string>
+
+
+
+    <string name="bus">Bus</string>
+    <string name="train">Train</string>
+    <string name="rent">Rent</string>
+    <string name="rentfrom">From</string>
+    <string name="rentto">To</string>
+    <string name="renttime">Time</string>
+    <string name="withdriver">With driver</string>
+    <string name="withoutdriver">Without driver</string>
+    <string name="toyota_yaris">toyota Yaris</string>
+    <string name="lkr_40_per_1km">lkr 40 per 1km</string>
+    <string name="rentveiw1">view</string>
+    <string name="toyota_aqua">toyota Aqua</string>
+    <string name="lkr_45_per_1km1">lkr 45 per 1km</string>
+    <string name="rentveiw2">view</string>
+    <string name="susuki_alto">susuki Alto</string>
+    <string name="lkr_35_per_1km1">lkr 35 per 1km</string>
+    <string name="rentveiw3">view</string>
+    <string name="toyota_hiace">toyota Hiace</string>
+    <string name="lkr_60_per_1km">lkr 60 per 1km</string>
+    <string name="rentveiw4">view</string>
+    <string name="toyota_wagonr">toyota wagonr</string>
+    <string name="lkr_42_per_1km">lkr 42 per 1km</string>
+    <string name="rentview5">view</string>
+    <string name="toyota_yaris1">toyota yaris</string>
+    <string name="lkr_45_per_1km">lkr 45 per 1km</string>
+    <string name="rentview6">view</string>
+    <string name="toyota_aqua1">toyota aqua</string>
+    <string name="rentview7">view</string>
+    <string name="toyota_yaris2">toyota yaris</string>
+    <string name="lkr_46_per_1km1">lkr 46 per 1km</string>
+    <string name="rentveiw8">view</string>
+    <string name="_4_passenger">4 Passenger</string>
+    <string name="_1_bags">1 Bags</string>
+    <string name="full_to_full">Full to Full</string>
+    <string name="description">description</string>
+    <string name="dis1">The Toyota Yaris is an ideal choice when needing a compact car with plenty of comfort and performance capabilities. ... Saftey Features: The Yaris is equipped with nine airbags and whiplash lessening seats.</string>
+    <string name="bookvehicle">book</string>
+    <string name="Name">namere</string>
+    <string name="namere">Name</string>
+    <string name="addressre">Address</string>
+    <string name="telephonrnumber1">Telephone Number</string>
+    <string name="rentId">Id</string>
 
 </resources>
