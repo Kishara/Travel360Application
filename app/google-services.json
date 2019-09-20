@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "645910816550-nknq2sojid26n6f0vflt1ed05adfo8rp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.travel360",
+            "certificate_hash": "f57557fa01b4dd265e13af55d42dc8daf19e2e76"
+          }
+        },
+        {
           "client_id": "645910816550-kak5dv3hqsguge5qefo0244bq4da4v3a.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

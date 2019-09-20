@@ -140,7 +140,7 @@
         android:text="@string/dis1" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/detailsBookvehicleBtn"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="150dp"
@@ -161,7 +161,7 @@
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/editTextname"
+        android:id="@+id/detailsName"
         android:layout_width="190dp"
         android:layout_height="38dp"
         android:layout_marginStart="160dp"
@@ -185,7 +185,7 @@
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/editTextaddress"
+        android:id="@+id/detailsAddress"
         android:layout_width="190dp"
         android:layout_height="38dp"
         android:layout_marginStart="160dp"
@@ -204,11 +204,11 @@
         android:layout_marginTop="550dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/telephonrnumber1"
+        android:text="@string/ctnumber"
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/editTexttelenumber"
+        android:id="@+id/detailsContactnumber"
         android:layout_width="190dp"
         android:layout_height="38dp"
         android:layout_marginStart="160dp"
@@ -231,7 +231,7 @@
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/editTextid"
+        android:id="@+id/detailsRentid"
         android:layout_width="190dp"
         android:layout_height="38dp"
         android:layout_marginStart="160dp"

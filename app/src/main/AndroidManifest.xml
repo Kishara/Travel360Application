@@ -13,7 +13,13 @@
         <activity android:name=".userProfile" />
         <activity android:name=".busShedule" />
         <activity android:name=".trainShedule" />
-        <activity android:name=".vehicleDetails" />
+        <activity android:name=".vehicleDetails" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".rentVehicles" />
         <activity android:name=".rentform" />
         <activity android:name=".vehicleType" />
@@ -23,13 +29,9 @@
         <activity android:name=".travelItemDescriptionUpdate" />
         <activity android:name=".cartItemList" />
         <activity android:name=".travelItemDescription" />
-        <activity android:name=".signIn">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".signIn"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
         <activity android:name=".MainActivity" />
     </application>
 
