@@ -30,12 +30,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
-    //firebase auth
-    implementation 'com.google.firebase:firebase-auth:19.0.0'
-    //firebase storage
-    implementation 'com.google.firebase:firebase-storage:19.0.0'
-    //firebase core
-    implementation 'com.google.firebase:firebase-core:17.2.0'
 
-    implementation 'com.squareup.picasso:picasso:2.5.2'
 }

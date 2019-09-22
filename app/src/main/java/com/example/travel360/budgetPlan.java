@@ -32,7 +32,7 @@ public class budgetPlan extends AppCompatActivity {
 
     DatabaseReference dbRef;
 
-    public Pattern price = Pattern.compile("^" + "(?=.*[0-9])" +"$");
+
 
     BudgetManager budgetManager  = new BudgetManager();
 
