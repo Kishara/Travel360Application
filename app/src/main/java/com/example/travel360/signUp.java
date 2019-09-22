@@ -68,7 +68,7 @@ public class signUp extends AppCompatActivity {
         regSignInTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(signUp.this,signIn.class);
+                Intent intent = new Intent(signUp.this,signUp.class);
                 startActivity(intent);
             }
         });

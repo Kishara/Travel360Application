@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +47,7 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.tr
         holder.travelItemName.setText(travelItemList.get(position).getTravelItemName());
         holder.travelItemDescription.setText(travelItemList.get(position).getTravelItemDescription());
         holder.travelItemPrice.setText(travelItemList.get(position).getTravelItemPrice());
+
     }
 
     @Override
@@ -55,13 +57,14 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.tr
 
     public class travelViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView travelItemName,travelItemDescription,travelItemPrice;
+        ImageView ItemImage;
         public travelViewHolder(@NonNull View itemView) {
             super(itemView);
 
             travelItemName =(TextView)itemView.findViewById(R.id.Itemname);
             travelItemDescription = (TextView)itemView.findViewById((R.id.Itemdescription));
             travelItemPrice = (TextView)itemView.findViewById((R.id.Itemprice));
-
+            ItemImage = (ImageView)itemView.findViewById(R.id.ItemimageView);
             itemView.setOnClickListener(this);
         }
 
@@ -69,17 +72,20 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.tr
         public void onClick(View view) {
             Toast.makeText(view.getContext(),travelItemList.get(getAdapterPosition()).getTravelItemId(),Toast.LENGTH_SHORT).show();
 
-            String itemName,itemDescription,itemPrice,itemId;
+            String itemName,itemDescription,itemPrice,itemId,userContactNumber;
             itemName = travelItemList.get(getAdapterPosition()).getTravelItemName();
             itemPrice = travelItemList.get(getAdapterPosition()).getTravelItemPrice();
             itemDescription = travelItemList.get(getAdapterPosition()).getTravelItemDescription();
             itemId = travelItemList.get(getAdapterPosition()).getTravelItemId();
+            userContactNumber =travelItemList.get(getAdapterPosition()).getTravelContactNumber();
 
             Intent intent = new Intent(view.getContext(),travelItemDescription.class);
             intent.putExtra("itemName",itemName);
             intent.putExtra("itemPrice",itemPrice);
             intent.putExtra("itemDescription",itemDescription);
             intent.putExtra("itemId",itemId);
+            intent.putExtra("itemUserContactNumber",userContactNumber);
+
             view.getContext().startActivity(intent);
         }
     }

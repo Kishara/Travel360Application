@@ -135,6 +135,16 @@
     <string name="rentfrom">Rent Form</string>
     <string name="renttime">Rent Time</string>
 
+    <string name="editprofile">Edit Profile</string>
+    <string name="profile">Profile</string>
+    <string name="ctnumber">Contact Number</string>
+
+
+    <string name="panasonic">Panasonic Lumix LX10</string>
+    <string name="camera_price">LKR 25,200.00</string>
+    <string name="camera_info">Travel Item Description</string>
+    <string name="camara_des">The Panasonic Lumix DMC-LX10 (LX15 in some markets) is a 20MP large-sensor compact with a bright (F1.4-2.8), 24-72mm equivalent zoom lens. Which is to say, its a very capable pocket camera. And, being a Panasonic, it has video specs and clever video-based features to back up its stills capabilities.</string>
+
     <string name="budgetmanager">Budget Manager</string>
     <string name="budgettransportation">Transportation</string>
     <string name="budgethotelsandrestaurant">Hotels and Restaurant</string>
@@ -152,17 +162,13 @@
     <string name="travelitemsupdate">UPDATE</string>
     <string name="travelItemsTelNo">Mobile No</string>
     <string name="travelItemsQuantity">Quantity</string>
-    <string name="travelItemsBook">BOOK</string>
-    <string name="budgetAdd">Add Budget</string>
-    <string name="budgetDelete">Delete Budget</string>
-    <string name="budgetUpdate">Update Budget</string>
-    <string name="panasonic">Panasonic Lumix LX10</string>
-    <string name="camera_price">LKR 25,200.00</string>
-    <string name="camera_info">Camara Description</string>
-    <string name="camara_des">The Panasonic Lumix DMC-LX10 (LX15 in some markets) is a 20MP large-sensor compact with a bright (F1.4-2.8), 24-72mm equivalent zoom lens. Which is to say, its a very capable pocket camera. And, being a Panasonic, it has video specs and clever video-based features to back up its stills capabilities.</string>
-    <string name="editprofile">Edit Profile</string>
-    <string name="profile">Profile</string>
-    <string name="ctnumber">Contact Number</string>
+    <string name="travelItemsCall">CALL</string>
+    <string name="budgetAdd">ADD</string>
+    <string name="budgetDelete">DELETE</string>
+    <string name="budgetUpdate">UPDATE</string>
+    <string name="tripname">Trip Name</string>
+    <string name="itemDescription">Description</string>
+    <string name="travelaIItem">ALL ITEMS</string>
 
 
 </resources>

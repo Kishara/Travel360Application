@@ -7,249 +7,315 @@
     tools:context=".budgetPlan">
 
 
-    <TextView
-        android:id="@+id/budgetHeading_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/nunito_bold"
-        android:text="@string/budgetmanager"
-        android:textColor="#555555"
-        android:textSize="24sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/travelItemsSearch_field"
+                android:layout_width="313dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetHeading_label"
+                android:layout_alignStart="@+id/cartHeading_label"
+                android:layout_marginStart="-10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginRight="20dp"
+                android:layout_toStartOf="@+id/TravelItemsSearch_btn"
+                android:background="@drawable/search_layout"
+                android:ems="10"
+                android:fontFamily="@font/nunito_semibold"
+                android:hint="@string/searchhere"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/TravelItemsSearch_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/travelItemsSearch_field"
+                android:layout_alignBottom="@+id/travelItemsSearch_field"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="0dp"
+                android:background="@android:color/background_light"
+                app:srcCompat="@mipmap/search_button" />
+
+            <TextView
+                android:id="@+id/budgetHeading_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/budgetmanager"
+                android:textColor="#555555"
+                android:textSize="24sp" />
 
 
-    <TextView
-        android:id="@+id/budgetLabelTotal"
-        android:layout_width="133dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarOther"
-        android:layout_marginStart="154dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="46dp"
-        android:layout_toEndOf="@+id/budgetCalcButton"
-        android:fontFamily="@font/nunito_bold"
-        android:text="@string/budgetrs"
-        android:textColor="#555555"
-        android:textSize="24sp" />
+            <TextView
+                android:id="@+id/budgetLabelTotal"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarOther"
+                android:layout_marginStart="154dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="48dp"
+                android:layout_toEndOf="@+id/budgetCalcButton"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/budgetrs"
+                android:textColor="#555555"
+                android:textSize="24sp" />
 
-    <ProgressBar
-        android:id="@+id/budgetProgressBarTransportation"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetLabelTransportation"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="11dp"
-        android:progress="100" />
-
-
-    <ProgressBar
-        android:id="@+id/budgetProgressBarHotelsandRestaurant"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarTransportation"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="68dp"
-        android:progress="100" />
-
-    <ProgressBar
-        android:id="@+id/budgetProgressBarBillsandTickets"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarHotelsandRestaurant"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="66dp"
-        android:progress="100" />
-
-    <ProgressBar
-        android:id="@+id/budgetProgressBarFoodandBavarage"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarBillsandTickets"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="68dp"
-        android:progress="100" />
-
-    <ProgressBar
-        android:id="@+id/budgetProgressBarOther"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarFoodandBavarage"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="68dp"
-        android:progress="100" />
-
-    <TextView
-        android:id="@+id/budgetLabelTransportation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetHeading_label"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/budgettransportation"
-        android:textSize="18sp" />
+            <ProgressBar
+                android:id="@+id/budgetProgressBarTransportation"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetLabelTransportation"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="11dp"
+                android:progress="0" />
 
 
-    <TextView
-        android:id="@+id/budgetLabelOther"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarFoodandBavarage"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/budgetother"
-        android:textSize="18sp" />
+            <ProgressBar
+                android:id="@+id/budgetProgressBarHotelsandRestaurant"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarTransportation"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="69dp"
+                android:progress="0" />
 
-    <TextView
-        android:id="@+id/budgetLabelFoodandBavarage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarBillsandTickets"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="33dp"
-        android:text="@string/budgetfoodandbavarage"
-        android:textSize="18sp" />
+            <ProgressBar
+                android:id="@+id/budgetProgressBarBillsandTickets"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarHotelsandRestaurant"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="65dp"
+                android:progress="0" />
 
-    <TextView
-        android:id="@+id/budgetLabelBillsandTickets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarHotelsandRestaurant"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="34dp"
-        android:text="@string/budgetbillsandtickets"
-        android:textSize="18sp" />
+            <ProgressBar
+                android:id="@+id/budgetProgressBarFoodandBavarage"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarBillsandTickets"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="69dp"
+                android:progress="0" />
 
-    <TextView
-        android:id="@+id/budgetLabelHotelsandRestaurant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarTransportation"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="33dp"
-        android:text="@string/budgethotelsandrestaurant"
-        android:textSize="18sp" />
+            <ProgressBar
+                android:id="@+id/budgetProgressBarOther"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarFoodandBavarage"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="68dp"
+                android:progress="0" />
 
-    <EditText
-        android:id="@+id/budgetEditTextBillsandTickets"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarHotelsandRestaurant"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="21dp"
-        android:layout_toEndOf="@+id/budgetLabelBillsandTickets"
-        android:ems="10"
-        android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/budgetLabelTransportation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/UserTravelLabelItemName"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="61dp"
+                android:text="@string/budgettransportation"
+                android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/budgetEditTextOther"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarFoodandBavarage"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="21dp"
-        android:layout_toEndOf="@+id/budgetLabelOther"
-        android:ems="10"
-        android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/budgetEditTextFoodandBavarage"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarBillsandTickets"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="21dp"
-        android:layout_toEndOf="@+id/budgetLabelFoodandBavarage"
-        android:ems="10"
-        android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/UserTravelLabelItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/travelItemsSearch_field"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="62dp"
+                android:text="@string/tripname"
+                android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/budgetEditTextHotelsandRestaurant"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarTransportation"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="22dp"
-        android:layout_toEndOf="@+id/budgetLabelHotelsandRestaurant"
-        android:ems="10"
-        android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/budgetLabelOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarFoodandBavarage"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/budgetother"
+                android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/budgetEditTextTransportation"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="68dp"
-        android:layout_toEndOf="@+id/budgetLabelTransportation"
-        android:ems="10"
-        android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/budgetLabelFoodandBavarage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarBillsandTickets"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="34dp"
+                android:text="@string/budgetfoodandbavarage"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/budgetCalcButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetProgressBarOther"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="39dp"
-        android:text="@string/budgettotal" />
+            <TextView
+                android:id="@+id/budgetLabelBillsandTickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarHotelsandRestaurant"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="33dp"
+                android:text="@string/budgetbillsandtickets"
+                android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/txtUserTelNo"
-        android:layout_width="383dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/budgetCalcButton"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="@string/travelItemsTelNo"
-        android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/budgetLabelHotelsandRestaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarTransportation"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="34dp"
+                android:text="@string/budgethotelsandrestaurant"
+                android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/budgetAddButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtUserTelNo"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="18dp"
-        android:text="@string/budgetAdd" />
+            <EditText
+                android:id="@+id/budgetEditTextBillsandTickets"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarHotelsandRestaurant"
+                android:layout_marginStart="53dp"
+                android:layout_marginTop="21dp"
+                android:layout_toEndOf="@+id/budgetLabelBillsandTickets"
+                android:ems="10"
+                android:inputType="phone" />
 
-    <Button
-        android:id="@+id/budgetUpdateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtUserTelNo"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="18dp"
-        android:layout_toEndOf="@+id/budgetAddButton"
-        android:text="@string/budgetUpdate" />
+            <EditText
+                android:id="@+id/budgetEditTextOther"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarFoodandBavarage"
+                android:layout_marginStart="144dp"
+                android:layout_marginTop="21dp"
+                android:layout_toEndOf="@+id/budgetLabelOther"
+                android:ems="10"
+                android:inputType="phone" />
 
-    <Button
-        android:id="@+id/budgetDeleteButton"
-        android:layout_width="136dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtUserTelNo"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="18dp"
-        android:layout_toEndOf="@+id/budgetUpdateButton"
-        android:text="@string/budgetDelete" />
+            <EditText
+                android:id="@+id/budgetEditTextFoodandBavarage"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarBillsandTickets"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="21dp"
+                android:layout_toEndOf="@+id/budgetLabelFoodandBavarage"
+                android:ems="10"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/budgetEditTextHotelsandRestaurant"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetProgressBarTransportation"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="22dp"
+                android:layout_toEndOf="@+id/budgetLabelHotelsandRestaurant"
+                android:ems="10"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/budgetEditTextTripName"
+                android:layout_width="266dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/travelItemsSearch_field"
+                android:layout_marginStart="-9dp"
+                android:layout_marginTop="55dp"
+                android:layout_toEndOf="@+id/budgetLabelTransportation"
+                android:ems="10"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/budgetEditTextTransportation"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetEditTextTripName"
+                android:layout_marginStart="67dp"
+                android:layout_marginTop="34dp"
+                android:layout_toEndOf="@+id/budgetLabelTransportation"
+                android:ems="10"
+                android:inputType="phone" />
+
+            <Button
+                android:id="@+id/budgetCalcButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_below="@+id/budgetProgressBarOther"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="57dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#FFBF40"
+                android:text="@string/budgettotal" />
+
+
+            <Button
+                android:id="@+id/budgetInsertButton"
+                android:layout_width="70dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/budgetCalcButton"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_button"
+                android:text="@string/budgetAdd" />
+
+            <Button
+                android:id="@+id/budgetUpdateButton"
+                android:layout_width="70dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/budgetCalcButton"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginBottom="20dp"
+                android:layout_toEndOf="@+id/budgetInsertButton"
+                android:background="@drawable/rounded_button"
+                android:text="@string/budgetUpdate" />
+
+            <Button
+                android:id="@+id/budgetDeleteButton"
+                android:layout_width="70dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/budgetCalcButton"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginBottom="20dp"
+                android:layout_toEndOf="@+id/budgetUpdateButton"
+                android:background="@drawable/rounded_button"
+                android:text="@string/budgetDelete" />
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

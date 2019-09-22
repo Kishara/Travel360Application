@@ -8,17 +8,14 @@
 
 
     <TextView
-
         android:id="@+id/Itemname"
-        style="@style/TextAppearance.AppCompat.Medium"
-        android:layout_width="379dp"
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="369dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-84dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="1dp"
         android:layout_toEndOf="@+id/imageView"
         android:text="@string/travelitemsitemName" />
-
 
     <TextView
 
@@ -27,10 +24,12 @@
         android:layout_width="283dp"
         android:layout_height="54dp"
         android:layout_below="@+id/Itemname"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="6dp"
         android:layout_toEndOf="@+id/imageView"
-        android:text="@string/camera_info" />
+        android:text="@string/itemDescription" />
+
+
 
     <TextView
 
@@ -39,17 +38,17 @@
         android:layout_width="284dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Itemdescription"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="9dp"
         android:layout_toEndOf="@+id/imageView"
         android:text="@string/travelitemsitemPrice" />
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ItemimageView"
         android:layout_width="83dp"
         android:layout_height="84dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="35dp"
+        android:layout_below="@+id/Itemname"
+        android:layout_marginTop="5dp"
         app:srcCompat="@drawable/smallicon" />
 </RelativeLayout>

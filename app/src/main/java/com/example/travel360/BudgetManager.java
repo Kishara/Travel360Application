@@ -6,19 +6,19 @@ public class BudgetManager {
     String budgetBillsandTickets;
     String budgetFoodandBavarage;
     String budgetOther;
-    String budgetUserTelNo;
+    String budgetTripName;
     String budgetTotal;
 
     public BudgetManager() {
     }
 
-    public BudgetManager(String budgetTransportation, String budgetHotelsandRestaurant, String budgetBillsandTickets, String budgetFoodandBavarage, String budgetOther, String budgetUserTelNo, String budgetTotal) {
+    public BudgetManager(String budgetTransportation, String budgetHotelsandRestaurant, String budgetBillsandTickets, String budgetFoodandBavarage, String budgetOther, String budgetTripName, String budgetTotal) {
         this.budgetTransportation = budgetTransportation;
         this.budgetHotelsandRestaurant = budgetHotelsandRestaurant;
         this.budgetBillsandTickets = budgetBillsandTickets;
         this.budgetFoodandBavarage = budgetFoodandBavarage;
         this.budgetOther = budgetOther;
-        this.budgetUserTelNo = budgetUserTelNo;
+        this.budgetTripName = budgetTripName;
         this.budgetTotal = budgetTotal;
     }
 
@@ -62,12 +62,12 @@ public class BudgetManager {
         this.budgetOther = budgetOther;
     }
 
-    public String getBudgetUserTelNo() {
-        return budgetUserTelNo;
+    public String getBudgetTripName() {
+        return budgetTripName;
     }
 
-    public void setBudgetUserTelNo(String budgetUserTelNo) {
-        this.budgetUserTelNo = budgetUserTelNo;
+    public void setBudgetTripName(String budgetTripName) {
+        this.budgetTripName = budgetTripName;
     }
 
     public String getBudgetTotal() {

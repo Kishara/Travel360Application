@@ -5,7 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".travelItemDescription">
+
+    <TextView
+        android:id="@+id/heading_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="@string/camera_info"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <ScrollView
+        android:layout_marginTop="65dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -13,19 +30,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/heading_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="11dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/nunito_bold"
-                android:text="@string/camera_info"
-                android:textColor="#555555"
-                android:textSize="30sp" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -47,7 +51,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/travelitemsitemName"
-                android:textSize="@dimen/item_name"
+                android:textSize="@dimen/item_price"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -58,7 +62,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/travelitemsitemNo"
-                android:textSize="@dimen/item_price"
+                android:textSize="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -66,9 +70,10 @@
                 android:id="@+id/item_price"
                 android:layout_width="160dp"
                 android:layout_height="28dp"
-                android:layout_marginStart="240dp"
+                android:layout_marginStart="235dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/travelitemsitemPrice"
+                android:textAlignment="textEnd"
                 android:textSize="@dimen/item_price"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -82,7 +87,6 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/camera_info"
-                android:textColor="#000000"
                 android:textSize="@dimen/item_price" />
 
             <TextView
@@ -96,31 +100,26 @@
                 android:text="@string/camara_des"
                 android:textSize="@dimen/cameradescription" />
 
-
-            <EditText
+            <TextView
                 android:id="@+id/txtUserTelNo"
-                android:layout_width="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop ="25dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/travelItemsTelNo"
-                android:inputType="textPersonName" />
+                android:text="@string/travelItemsTelNo"
+                android:textSize="@dimen/cameradescription" />
 
-            <EditText
-                android:id="@+id/txtquantity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/travelItemsQuantity"
-                android:inputType="textPersonName" />
+
+
 
             <Button
-                android:id="@+id/btnBook"
+                android:id="@+id/btnUpdate"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:background="#FFBF40"
-                android:text="@string/travelItemsBook"
+                android:text="@string/travelItemsCall"
                 android:layout_marginBottom="15dp"/>
 
 
