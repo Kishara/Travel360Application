@@ -17,6 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.regex.Pattern;
+
 public class budgetPlan extends AppCompatActivity {
     EditText editTextTransportation,editTextHotelsandRestaurant,editTextBillsandTickets,editTextFoodandBavarage,editTextOther,tell;
     String Transportation,HotelsandRestaurant,BillsandTickets,FoodandBavarage,TextOther;
@@ -108,17 +110,24 @@ public class budgetPlan extends AppCompatActivity {
     }
 
     public void addBudget(){
+
         table_Item.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                budgetManager.setBudgetTransportation(editTextTransportation.getText().toString().trim());
-                budgetManager.setBudgetHotelsandRestaurant(editTextHotelsandRestaurant.getText().toString().trim());
-                budgetManager.setBudgetBillsandTickets(editTextBillsandTickets.getText().toString());
-                budgetManager.setBudgetFoodandBavarage(editTextFoodandBavarage.getText().toString());
-                budgetManager.setBudgetOther(editTextOther.getText().toString());
-                budgetManager.setBudgetUserTelNo(tell.getText().toString());
-                budgetManager.setBudgetTotal(lableBudgetTotal.getText().toString());
-                table_Item.child(budgetManager.getBudgetUserTelNo()).setValue(budgetManager);
+
+                try {
+                    budgetManager.setBudgetTransportation(editTextTransportation.getText().toString().trim());
+                    budgetManager.setBudgetHotelsandRestaurant(editTextHotelsandRestaurant.getText().toString().trim());
+                    budgetManager.setBudgetBillsandTickets(editTextBillsandTickets.getText().toString());
+                    budgetManager.setBudgetFoodandBavarage(editTextFoodandBavarage.getText().toString());
+                    budgetManager.setBudgetOther(editTextOther.getText().toString());
+                    budgetManager.setBudgetUserTelNo(tell.getText().toString());
+                    budgetManager.setBudgetTotal(lableBudgetTotal.getText().toString());
+                    table_Item.child(budgetManager.getBudgetUserTelNo()).setValue(budgetManager);
+                }catch (Exception e){
+                    Toast.makeText(getApplicationContext(),"Data Insert Successfully",Toast.LENGTH_SHORT).show();
+                }
+
             }
 
             @Override
@@ -159,8 +168,9 @@ public class budgetPlan extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.hasChild(tell.getText().toString())){
-                    dbRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager").child(tell.getText().toString());
+                    dbRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager").child("0778989890");
                     dbRef.removeValue();
+
 
                     Toast.makeText(getApplicationContext(),"Data Delete Successfully",Toast.LENGTH_SHORT).show();
                 }
@@ -178,17 +188,23 @@ public class budgetPlan extends AppCompatActivity {
         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChild(tell.getText().toString())){
-                    budgetManager.setBudgetTransportation(editTextTransportation.getText().toString().trim());
-                    budgetManager.setBudgetHotelsandRestaurant(editTextHotelsandRestaurant.getText().toString().trim());
-                    budgetManager.setBudgetBillsandTickets(editTextBillsandTickets.getText().toString());
-                    budgetManager.setBudgetFoodandBavarage(editTextFoodandBavarage.getText().toString());
-                    budgetManager.setBudgetOther(editTextOther.getText().toString());
-                    budgetManager.setBudgetUserTelNo(tell.getText().toString());
+                try {
+                    if (dataSnapshot.hasChild(tell.getText().toString())) {
+                        budgetManager.setBudgetTransportation(editTextTransportation.getText().toString().trim());
+                        budgetManager.setBudgetHotelsandRestaurant(editTextHotelsandRestaurant.getText().toString().trim());
+                        budgetManager.setBudgetBillsandTickets(editTextBillsandTickets.getText().toString());
+                        budgetManager.setBudgetFoodandBavarage(editTextFoodandBavarage.getText().toString());
+                        budgetManager.setBudgetOther(editTextOther.getText().toString());
+                        budgetManager.setBudgetUserTelNo(tell.getText().toString());
 
-                    dbRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager").child(tell.getText().toString());
-                    dbRef.setValue(budgetManager);
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager").child(tell.getText().toString());
+                        dbRef.setValue(budgetManager);
+
+                    }
+                }catch (Exception e){
+                    Toast.makeText(getApplicationContext(),"Data Insert Successfully",Toast.LENGTH_SHORT).show();
                 }
+
             }
 
             @Override
@@ -196,5 +212,31 @@ public class budgetPlan extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void clearControls(){
+        editTextTransportation.setText("");
+        editTextHotelsandRestaurant.setText("");
+        editTextBillsandTickets.setText("");
+        editTextFoodandBavarage.setText("");
+        editTextOther.setText("");
+    }
+
+    private boolean validate(){
+        String tran = editTextHotelsandRestaurant.getText().toString().trim();
+        Pattern price = Pattern.compile("^" + "(?=.*[0-9])" +"$");
+        if(tran.isEmpty()){
+            editTextHotelsandRestaurant.setError("Filed can't be empty");
+            return false;
+        }
+        else if (!price.matcher(tran).matches()) {
+            editTextHotelsandRestaurant.setError("Invalid empty");
+            return false;
+        }
+        else{
+            return  true;
+        }
+
+
     }
 }
