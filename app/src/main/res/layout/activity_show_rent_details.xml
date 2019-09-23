@@ -98,7 +98,7 @@
                 android:ems="10"
                 android:layout_marginTop="8dp"
                 android:inputType="textPersonName"
-                android:hint="@string/rent_id_rent" />
+                android:hint="Rent ID" />
 
             <Button
                 android:id="@+id/button1"

@@ -14,7 +14,13 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".signUp"/>
-        <activity android:name=".homePage" />
+        <activity android:name=".homePage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".userProfile" />
         <activity android:name=".busShedule" />
         <activity android:name=".trainShedule" />
@@ -27,12 +33,11 @@
         <activity android:name=".travelItemList" />
         <activity android:name=".travelItemDescription" />
         <activity android:name=".usersTravelItems" />
-        <activity android:name=".signIn">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".ShowDetailsHotels">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity android:name=".signIn">
+
 
         </activity>
     </application>

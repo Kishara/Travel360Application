@@ -118,6 +118,15 @@
             android:layout_marginTop="-40dp"
             android:text="@string/deletebtn" />
 
+        <Button
+            android:id="@+id/button14"
+            android:background="#FFBF40"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="30dp"
+            android:text="Show" />
+
     </LinearLayout>
     </ScrollView>
 
