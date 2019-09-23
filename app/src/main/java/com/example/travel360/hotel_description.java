@@ -23,7 +23,7 @@ public class hotel_description extends AppCompatActivity implements DatePickerDi
     private TextView dateText;
 
     TextView txtdate;
-    EditText txtrooms,txtadults,txtchild;
+    EditText txtrooms,txtadults,txtchild,txtdescription;
     Button bookroombtn;
     DatabaseReference dbRef;
     Hotel hotel;
@@ -33,6 +33,7 @@ public class hotel_description extends AppCompatActivity implements DatePickerDi
         txtrooms.setText("");
         txtadults.setText("");
         txtchild.setText("");
+        txtdescription.setText("");
 
     }
 
@@ -46,6 +47,7 @@ public class hotel_description extends AppCompatActivity implements DatePickerDi
         txtrooms = findViewById(R.id.editText3);
         txtadults = findViewById(R.id.editText7);
         txtchild = findViewById(R.id.editText8);
+        txtdescription = findViewById(R.id.editText);
         bookroombtn = findViewById(R.id.button);
 
         hotel = new Hotel();
@@ -59,12 +61,14 @@ public class hotel_description extends AppCompatActivity implements DatePickerDi
                 String hotelroom = txtrooms.getText().toString();
                 String hoteladult = txtadults.getText().toString();
                 String hotelchild = txtchild.getText().toString();
+                String hoteldescription = txtdescription.getText().toString();
 
                 try {
                     hotel.sethoteldate(hoteldate);
                     hotel.sethotelroom(hotelroom);
                     hotel.sethoteladult(hoteladult);
                     hotel.sethotelchild(hotelchild);
+                    hotel.sethoteldescription(hoteldescription);
 
                     dbRef.push().setValue(hotel);
 

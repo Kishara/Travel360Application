@@ -6,6 +6,7 @@ public class Hotel {
     private String hotelroom;
     private String hoteladult;
     private String hotelchild;
+    private String hoteldescription;
 
     public Hotel() {
     }
@@ -36,5 +37,12 @@ public class Hotel {
     }
     public void sethotelchild(String hotelchild) {
         this.hotelchild = hotelchild;
+    }
+
+    public String gethoteldescription() {
+        return hoteldescription;
+    }
+    public void sethoteldescription(String hoteldescription) {
+        this.hoteldescription = hoteldescription;
     }
 }
