@@ -169,6 +169,8 @@
     <string name="tripname">Trip Name</string>
     <string name="itemDescription">Description</string>
     <string name="travelaIItem">ALL ITEMS</string>
+    <string name="date_txt">Pick a Date</string>
+    <string name="date_btn">Pick a Date</string>
 
 
 </resources>
