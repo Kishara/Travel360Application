@@ -46,7 +46,7 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.tr
     public void onBindViewHolder(@NonNull travelViewHolder holder, int position) {
         holder.travelItemName.setText(travelItemList.get(position).getTravelItemName());
         holder.travelItemDescription.setText(travelItemList.get(position).getTravelItemDescription());
-        holder.travelItemPrice.setText(travelItemList.get(position).getTravelItemPrice());
+        holder.travelItemPrice.setText("Rs. "+travelItemList.get(position).getTravelItemPrice());
 
     }
 
