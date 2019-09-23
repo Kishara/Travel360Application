@@ -24,13 +24,15 @@
         <activity android:name=".budgetPlan" />
         <activity android:name=".travelItemList" />
         <activity android:name=".travelItemDescription" />
-
-        <activity android:name=".usersTravelItems">
+        <activity android:name=".hotel_description" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".usersTravelItems">
+
         </activity>
     </application>
 
