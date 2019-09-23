@@ -84,7 +84,6 @@
     <string name="comment"></string>
 
 
-
     <string name="withdriver">withdriver</string>
     <string name="withoutdriver">With outdriver</string>
     <string name="toyota_yaris">toyota yaris</string>
@@ -163,6 +162,8 @@
     <string name="editprofile">Edit Profile</string>
     <string name="profile">Profile</string>
     <string name="ctnumber">Contact Number</string>
+    <string name="date_txt">Pick a Date</string>
+    <string name="date_btn">Pick a Date</string>
 
 
 </resources>

@@ -68,12 +68,12 @@ public class vehicleDetails extends AppCompatActivity {
                 catch (NumberFormatException ex1){
                     Toast.makeText(getApplicationContext(),"Invalid Contact No!",Toast.LENGTH_SHORT).show();
                 }
-                //openProfile();
+                openProfile();
             }
-           /* private void openProfile(){
-                Intent intent = new Intent(vehicleDetails.this,homePage.class);
+            private void openProfile(){
+                Intent intent = new Intent(vehicleDetails.this,displayvehicaldetails.class);
                 startActivity(intent);
-            }*/
+            }
 
 
         });
