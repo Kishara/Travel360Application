@@ -170,6 +170,9 @@
     <string name="travelaIItem">ALL ITEMS</string>
     <string name="date_txt">Pick a Date</string>
     <string name="date_btn">Pick a Date</string>
+    <string name="rooms_txt">Select no of Rooms</string>
+    <string name="adults_txt">Select no of Adults</string>
+    <string name="children_txt">Select no of Children</string>
 
 
 </resources>
