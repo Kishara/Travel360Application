@@ -2,7 +2,6 @@ package com.example.travel360;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -41,13 +40,7 @@ public class travelItemList extends AppCompatActivity {
 
         searchtxt =findViewById(R.id.travelItemsSearch_field);
         recyclerView = findViewById(R.id.TravelItemsRecycler_view);
-        search =findViewById(R.id.TravelItemsSearch_btn);
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
         getLastKeyFromFirebase();
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -127,7 +120,7 @@ public class travelItemList extends AppCompatActivity {
     private void getLastKeyFromFirebase() {
 
         Query getLastKey = FirebaseDatabase.getInstance().getReference()
-                .child("TravelItems").child("Camera02")
+                .child("TravelItems")
                 .orderByKey()
                 .limitToLast(1);
 

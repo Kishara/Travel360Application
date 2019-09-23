@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,15 +18,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.regex.Pattern;
+
 public class budgetPlan extends AppCompatActivity {
-    EditText editTextTransportation,editTextHotelsandRestaurant,editTextBillsandTickets,editTextFoodandBavarage,editTextOther,tell;
-    String Transportation,HotelsandRestaurant,BillsandTickets,FoodandBavarage,TextOther;
+    EditText editTextTransportation,editTextHotelsandRestaurant,editTextBillsandTickets,editTextFoodandBavarage,editTextOther,editTextTripName,editTextSearchField;
 
     ProgressBar progressBarTransportation, progressBarHotelsandRestaurant,progressBarbillsandTickets,progressBarFoodandBavarage,progressBarOther;
+
+    ImageButton buttonSearch;
     TextView lableBudgetTotal;
+
     Button buttonCalcTotal, buttonAdd,buttonDelete,buttonUpdate;
 
     DatabaseReference dbRef;
+
+
 
     BudgetManager budgetManager  = new BudgetManager();
 
@@ -36,6 +43,7 @@ public class budgetPlan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget_plan);
 
+        //budgetshow();
 
         editTextTransportation = findViewById(R.id.budgetEditTextTransportation);
         editTextHotelsandRestaurant = findViewById(R.id.budgetEditTextHotelsandRestaurant);
@@ -44,31 +52,30 @@ public class budgetPlan extends AppCompatActivity {
         editTextOther = findViewById(R.id.budgetEditTextOther);
         lableBudgetTotal = findViewById(R.id.budgetLabelTotal);
         buttonCalcTotal = findViewById(R.id.budgetCalcButton);
-        buttonAdd = findViewById(R.id.budgetAddButton);
+        buttonAdd = findViewById(R.id.budgetInsertButton);
         buttonUpdate = findViewById(R.id.budgetUpdateButton);
         buttonDelete = findViewById(R.id.budgetDeleteButton);
-        tell = findViewById(R.id.txtUserTelNo);
-
+        editTextTripName = findViewById(R.id.budgetEditTextTripName);
+        buttonSearch = findViewById(R.id.TravelItemsSearch_btn);
+        editTextSearchField = findViewById(R.id.travelItemsSearch_field);
 
         progressBarTransportation = findViewById(R.id.budgetProgressBarTransportation);
         progressBarbillsandTickets = findViewById(R.id.budgetProgressBarBillsandTickets);
         progressBarFoodandBavarage =findViewById(R.id.budgetProgressBarFoodandBavarage);
         progressBarHotelsandRestaurant = findViewById(R.id.budgetProgressBarHotelsandRestaurant);
         progressBarOther = findViewById(R.id.budgetProgressBarOther);
-    // value = Integer.parseInt(editTextTransportation.getText().toString());
 
-        Transportation = editTextTransportation.getText().toString();
-        HotelsandRestaurant = editTextHotelsandRestaurant.getText().toString();
-        BillsandTickets = editTextBillsandTickets.getText().toString();
-        FoodandBavarage = editTextFoodandBavarage.getText().toString();
-        TextOther = editTextOther.getText().toString();
-
-       //Integer total = Integer.parseInt(editTextTransportation.getText().toString()) + Integer.parseInt(editTextHotelsandRestaurant.getText().toString()) + Integer.parseInt(editTextBillsandTickets.getText().toString()) + Integer.parseInt(editTextFoodandBavarage.getText().toString()) + Integer.parseInt(editTextOther.getText().toString());
-
+        buttonSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clearControls();
+                budgetshow();
+            }
+        });
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addBudget();
+               addBudget();
             }
         });
         buttonUpdate.setOnClickListener(new View.OnClickListener() {
@@ -87,38 +94,51 @@ public class budgetPlan extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Integer Trans =Integer.parseInt(editTextTransportation.getText().toString()) /1000;
-                Integer Hotel =Integer.parseInt(editTextHotelsandRestaurant.getText().toString())/1000;
-                Integer Bills =Integer.parseInt(editTextBillsandTickets.getText().toString())/1000;
-                Integer Food =Integer.parseInt(editTextFoodandBavarage.getText().toString())/1000;
-                Integer Other =Integer.parseInt(editTextOther.getText().toString())/1000;
-                progressBarTransportation.setProgress(Trans);
-                progressBarHotelsandRestaurant.setProgress(Hotel);
-                progressBarbillsandTickets.setProgress(Bills);
-                progressBarHotelsandRestaurant.setProgress(Food);
-                progressBarOther.setProgress(Other);
+                if(validate()==true){
+                                        Integer Trans = Integer.parseInt(editTextTransportation.getText().toString()) /100;
+                                        Integer Hotel = Integer.parseInt(editTextHotelsandRestaurant.getText().toString())/1000;
+                                        Integer Bills = Integer.parseInt(editTextBillsandTickets.getText().toString())/1000;
+                                        Integer Food = Integer.parseInt(editTextFoodandBavarage.getText().toString())/1000;
+                                        Integer Other = Integer.parseInt(editTextOther.getText().toString())/1000;
 
-                Integer total = Integer.parseInt(editTextTransportation.getText().toString()) + Integer.parseInt(editTextHotelsandRestaurant.getText().toString()) + Integer.parseInt(editTextBillsandTickets.getText().toString()) + Integer.parseInt(editTextFoodandBavarage.getText().toString()) + Integer.parseInt(editTextOther.getText().toString());
+                                        progressBarTransportation.setProgress(Trans);
+                                        progressBarHotelsandRestaurant.setProgress(Hotel);
+                                        progressBarbillsandTickets.setProgress(Bills);
+                                        progressBarFoodandBavarage.setProgress(Food);
+                                        progressBarOther.setProgress(Other);
 
-                lableBudgetTotal.setText(total.toString());
+                                        Integer total = Integer.parseInt(editTextTransportation.getText().toString()) + Integer.parseInt(editTextHotelsandRestaurant.getText().toString()) + Integer.parseInt(editTextBillsandTickets.getText().toString()) + Integer.parseInt(editTextFoodandBavarage.getText().toString()) + Integer.parseInt(editTextOther.getText().toString());
 
-                budgetshow();
+                                        lableBudgetTotal.setText("Rs." + total.toString());
+
+
+                }
             }
         });
     }
 
     public void addBudget(){
+
         table_Item.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                budgetManager.setBudgetTransportation(editTextTransportation.getText().toString().trim());
-                budgetManager.setBudgetHotelsandRestaurant(editTextHotelsandRestaurant.getText().toString().trim());
-                budgetManager.setBudgetBillsandTickets(editTextBillsandTickets.getText().toString());
-                budgetManager.setBudgetFoodandBavarage(editTextFoodandBavarage.getText().toString());
-                budgetManager.setBudgetOther(editTextOther.getText().toString());
-                budgetManager.setBudgetUserTelNo(tell.getText().toString());
-                budgetManager.setBudgetTotal(lableBudgetTotal.getText().toString());
-                table_Item.child(budgetManager.getBudgetUserTelNo()).setValue(budgetManager);
+
+               try {
+                    budgetManager.setBudgetTransportation(editTextTransportation.getText().toString().trim());
+                    budgetManager.setBudgetHotelsandRestaurant(editTextHotelsandRestaurant.getText().toString().trim());
+                    budgetManager.setBudgetBillsandTickets(editTextBillsandTickets.getText().toString());
+                    budgetManager.setBudgetFoodandBavarage(editTextFoodandBavarage.getText().toString());
+                    budgetManager.setBudgetOther(editTextOther.getText().toString());
+                    budgetManager.setBudgetTripName(editTextTripName.getText().toString());
+                    budgetManager.setBudgetTotal(lableBudgetTotal.getText().toString());
+                    table_Item.child(budgetManager.getBudgetTripName()).setValue(budgetManager);
+
+                    Toast.makeText(getApplicationContext(), "Data Update Successfully", Toast.LENGTH_SHORT).show();
+
+                   }catch (Exception e){
+                    Toast.makeText(getApplicationContext(),"Invalid Operation",Toast.LENGTH_SHORT).show();
+                }
+                //clearControls();
             }
 
             @Override
@@ -129,18 +149,38 @@ public class budgetPlan extends AppCompatActivity {
     }
 
     public void budgetshow(){
-        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager").child(tell.getText().toString());
-        readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager").child(editTextSearchField.getText().toString());
+        delRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChildren()){
-                    editTextTransportation.setText(dataSnapshot.child("budgetTransportation").getValue().toString());
-                    editTextHotelsandRestaurant.setText(dataSnapshot.child("budgetHotelsandRestaurant").getValue().toString());
-                    editTextBillsandTickets.setText(dataSnapshot.child("budgetBillsandTickets").getValue().toString());
-                    editTextFoodandBavarage.setText(dataSnapshot.child("budgetFoodandBavarage").getValue().toString());
-                    editTextOther.setText(dataSnapshot.child("budgetOther").getValue().toString());
-                    tell.setText(dataSnapshot.child("budgetUserTelNo").getValue().toString());
-                    lableBudgetTotal.setText(dataSnapshot.child("budgetTotal").getValue().toString());
+                try {
+                    if (dataSnapshot.hasChildren()) {
+                        editTextTransportation.setText(dataSnapshot.child("budgetTransportation").getValue().toString());
+                        editTextHotelsandRestaurant.setText(dataSnapshot.child("budgetHotelsandRestaurant").getValue().toString());
+                        editTextBillsandTickets.setText(dataSnapshot.child("budgetBillsandTickets").getValue().toString());
+                        editTextFoodandBavarage.setText(dataSnapshot.child("budgetFoodandBavarage").getValue().toString());
+                        editTextOther.setText(dataSnapshot.child("budgetOther").getValue().toString());
+                        editTextTripName.setText(dataSnapshot.child("budgetTripName").getValue().toString());
+                        lableBudgetTotal.setText(dataSnapshot.child("budgetTotal").getValue().toString());
+
+                        Integer Trans = Integer.parseInt(dataSnapshot.child("budgetTransportation").getValue().toString()) /100;
+                        Integer Hotel = Integer.parseInt(dataSnapshot.child("budgetHotelsandRestaurant").getValue().toString())/1000;
+                        Integer Bills = Integer.parseInt(dataSnapshot.child("budgetBillsandTickets").getValue().toString())/1000;
+                        Integer Food = Integer.parseInt(dataSnapshot.child("budgetFoodandBavarage").getValue().toString())/1000;
+                        Integer Other = Integer.parseInt(dataSnapshot.child("budgetOther").getValue().toString())/1000;
+
+                        progressBarTransportation.setProgress(Trans);
+                        progressBarHotelsandRestaurant.setProgress(Hotel);
+                        progressBarbillsandTickets.setProgress(Bills);
+                        progressBarFoodandBavarage.setProgress(Food);
+                        progressBarOther.setProgress(Other);
+
+                        Toast.makeText(getApplicationContext(), "Data Update Successfully", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Invalid Trip Name", Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    Toast.makeText(getApplicationContext(),"Invalid Operation",Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -154,15 +194,23 @@ public class budgetPlan extends AppCompatActivity {
 
 
     public void budgetdelete(){
-        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager");
-        readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager");
+        delRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChild(tell.getText().toString())){
-                    dbRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager").child(tell.getText().toString());
-                    dbRef.removeValue();
+                try {
+                    if (dataSnapshot.hasChild(editTextTripName.getText().toString())) {
 
-                    Toast.makeText(getApplicationContext(),"Data Delete Successfully",Toast.LENGTH_SHORT).show();
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager").child(editTextSearchField.getText().toString());
+                        dbRef.removeValue();
+
+                        Toast.makeText(getApplicationContext(), "Data Delete Successfully", Toast.LENGTH_SHORT).show();
+
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Invalid Trip Name", Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    Toast.makeText(getApplicationContext(),"Invalid Operation",Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -178,17 +226,27 @@ public class budgetPlan extends AppCompatActivity {
         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChild(tell.getText().toString())){
-                    budgetManager.setBudgetTransportation(editTextTransportation.getText().toString().trim());
-                    budgetManager.setBudgetHotelsandRestaurant(editTextHotelsandRestaurant.getText().toString().trim());
-                    budgetManager.setBudgetBillsandTickets(editTextBillsandTickets.getText().toString());
-                    budgetManager.setBudgetFoodandBavarage(editTextFoodandBavarage.getText().toString());
-                    budgetManager.setBudgetOther(editTextOther.getText().toString());
-                    budgetManager.setBudgetUserTelNo(tell.getText().toString());
+                try {
+                    if (dataSnapshot.hasChild(editTextTripName.getText().toString())) {
+                        budgetManager.setBudgetTransportation(editTextTransportation.getText().toString().trim());
+                        budgetManager.setBudgetHotelsandRestaurant(editTextHotelsandRestaurant.getText().toString().trim());
+                        budgetManager.setBudgetBillsandTickets(editTextBillsandTickets.getText().toString());
+                        budgetManager.setBudgetFoodandBavarage(editTextFoodandBavarage.getText().toString());
+                        budgetManager.setBudgetOther(editTextOther.getText().toString());
+                        budgetManager.setBudgetTripName(editTextTripName.getText().toString());
 
-                    dbRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager").child(tell.getText().toString());
-                    dbRef.setValue(budgetManager);
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("BudgetManager").child(editTextTripName.getText().toString());
+                        dbRef.setValue(budgetManager);
+
+                        Toast.makeText(getApplicationContext(),"Data update Successfully",Toast.LENGTH_SHORT).show();
+
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Invalid Trip Name",Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                Toast.makeText(getApplicationContext(),"Invalid Operation",Toast.LENGTH_SHORT).show();
                 }
+
             }
 
             @Override
@@ -196,5 +254,51 @@ public class budgetPlan extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void clearControls(){
+        editTextTransportation.setText("");
+        editTextHotelsandRestaurant.setText("");
+        editTextBillsandTickets.setText("");
+        editTextFoodandBavarage.setText("");
+        editTextOther.setText("");
+        editTextTripName.setText("");
+    }
+
+    private boolean validate(){
+        String tran = editTextTransportation.getText().toString().trim();
+        String hotels = editTextHotelsandRestaurant.getText().toString().trim();
+        String bills = editTextBillsandTickets.getText().toString().trim();
+        String food = editTextFoodandBavarage.getText().toString().trim();
+        String other = editTextOther.getText().toString().trim();
+        String tripName = editTextTripName.getText().toString().trim();
+
+        if(tran.isEmpty()){
+            editTextTransportation.setError("Filed can't be empty");
+            return false;
+        }
+        else if (hotels.isEmpty()) {
+            editTextHotelsandRestaurant.setError("Filed can't be empty");
+            return false;
+        }
+        else if (bills.isEmpty()) {
+            editTextBillsandTickets.setError("Filed can't be empty");
+            return false;
+        }
+        else if (food.isEmpty()) {
+            editTextFoodandBavarage.setError("Filed can't be empty");
+            return false;
+        }
+        else if (other.isEmpty()) {
+            editTextOther.setError("Filed can't be empty");
+            return false;
+        }
+        else if (tripName.isEmpty()) {
+            editTextTripName.setError("Filed can't be empty");
+            return false;
+        }
+        else{
+            return  true;
+        }
     }
 }

@@ -5,15 +5,19 @@ public class TravelItems {
     String travelItemName;
     String travelItemPrice;
     String travelItemDescription;
+    String travelItemImage;
+    String travelContactNumber;
 
     public TravelItems() {
     }
 
-    public TravelItems(String travelItemId, String travelItemName, String travelItemPrice, String travelItemDescription) {
+    public TravelItems(String travelItemId, String travelItemName, String travelItemPrice, String travelItemDescription, String travelItemImage, String travelContactNumber) {
         this.travelItemId = travelItemId;
         this.travelItemName = travelItemName;
         this.travelItemPrice = travelItemPrice;
         this.travelItemDescription = travelItemDescription;
+        this.travelItemImage = travelItemImage;
+        this.travelContactNumber = travelContactNumber;
     }
 
     public String getTravelItemId() {
@@ -46,5 +50,21 @@ public class TravelItems {
 
     public void setTravelItemDescription(String travelItemDescription) {
         this.travelItemDescription = travelItemDescription;
+    }
+
+    public String getTravelItemImage() {
+        return travelItemImage;
+    }
+
+    public void setTravelItemImage(String travelItemImage) {
+        this.travelItemImage = travelItemImage;
+    }
+
+    public String getTravelContactNumber() {
+        return travelContactNumber;
+    }
+
+    public void setTravelContactNumber(String travelContactNumber) {
+        this.travelContactNumber = travelContactNumber;
     }
 }

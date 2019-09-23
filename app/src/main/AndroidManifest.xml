@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.travel360">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,29 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".displayvehicaldetails"></activity>
-        <activity android:name=".homePage" />
+        <activity android:name=".homePage"></activity>
         <activity android:name=".userProfile" />
         <activity android:name=".busShedule" />
         <activity android:name=".trainShedule" />
-        <activity android:name=".vehicleDetails">
+        <activity android:name=".vehicleDetails" />
+        <activity android:name=".rentVehicles" />
+        <activity android:name=".rentform" />
+        <activity android:name=".vehicleType" />
+        <activity android:name=".MainActivity" />
+
+        <activity android:name=".budgetPlan" />
+        <activity android:name=".travelItemList" />
+        <activity android:name=".travelItemDescription" />
+
+        <activity android:name=".usersTravelItems">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".rentVehicles" />
-        <activity android:name=".rentform" />
-        <activity android:name=".vehicleType" />
-        <activity android:name=".signUp" />
-        <activity android:name=".budgetPlan" />
-        <activity android:name=".travelItemList" />
-        <activity android:name=".travelItemDescriptionUpdate" />
-        <activity android:name=".cartItemList" />
-        <activity android:name=".travelItemDescription" />
-        <activity android:name=".signIn" />
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
