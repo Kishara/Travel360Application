@@ -220,6 +220,15 @@
                 android:inputType="textPersonName"
                 android:text="@string/comment" />
 
+            <Button
+                android:id="@+id/button11"
+                android:background="#FFBF40"
+                android:layout_gravity="center"
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="Enter" />
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">

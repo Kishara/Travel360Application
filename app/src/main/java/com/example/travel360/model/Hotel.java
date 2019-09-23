@@ -18,28 +18,28 @@ public class Hotel {
         this.hoteldate = hoteldate;
     }
 
-    public String gethotelroom() {
+    public String getHotelroom() {
         return hotelroom;
     }
     public void sethotelroom(String hotelroom) {
         this.hotelroom = hotelroom;
     }
 
-    public String gethoteladult() {
+    public String getHoteladult() {
         return hoteladult;
     }
     public void sethoteladult(String hoteladult) {
         this.hoteladult = hoteladult;
     }
 
-    public String gethotelchild() {
+    public String getHotelchild() {
         return hotelchild;
     }
     public void sethotelchild(String hotelchild) {
         this.hotelchild = hotelchild;
     }
 
-    public String gethoteldescription() {
+    public String getHoteldescription() {
         return hoteldescription;
     }
     public void sethoteldescription(String hoteldescription) {

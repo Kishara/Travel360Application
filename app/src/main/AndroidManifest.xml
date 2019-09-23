@@ -25,6 +25,9 @@
         <activity android:name=".travelItemList" />
         <activity android:name=".travelItemDescription" />
         <activity android:name=".hotel_description" >
+
+        </activity>
+        <activity android:name=".resturant_description">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
