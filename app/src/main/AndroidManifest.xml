@@ -12,8 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".signUp"/>
+        <activity android:name=".editProfile"></activity>
+        <activity android:name=".signUp" />
         <activity android:name=".homePage" />
         <activity android:name=".userProfile" />
         <activity android:name=".busShedule" />
@@ -33,7 +33,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

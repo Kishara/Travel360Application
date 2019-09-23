@@ -7,7 +7,7 @@
     tools:context=".userProfile">
 
     <ImageView
-        android:id="@+id/userDp2"
+        android:id="@+id/userDp"
         android:layout_width="155dp"
         android:layout_height="146dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,71 +18,63 @@
         app:srcCompat="@drawable/user" />
 
     <TextView
-        android:id="@+id/fullNameProfile"
+        android:id="@+id/userName"
         android:layout_width="259dp"
         android:layout_height="31dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userDp2"
-        app:layout_constraintVertical_bias="0.212" />
+        app:layout_constraintTop_toBottomOf="@+id/userDp"
+        app:layout_constraintVertical_bias="0.097" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/editProfile"
         android:layout_width="102dp"
         android:layout_height="35dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/editprofile"
         android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/fullNameProfile"
+        app:layout_constraintBottom_toTopOf="@+id/userName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userDp2"
+        app:layout_constraintTop_toBottomOf="@+id/userDp"
         app:layout_constraintVertical_bias="0.108" />
-
-    <ImageButton
-        android:id="@+id/addImgBtn2"
-        android:layout_width="28dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
-        app:layout_constraintStart_toEndOf="@+id/userDp2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724"
-        app:srcCompat="@android:drawable/ic_input_add" />
 
     <TextView
         android:id="@+id/usernameProfile"
         android:layout_width="188dp"
         android:layout_height="26dp"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fullNameProfile"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/contactProfile"
+        android:id="@+id/userMail"
         android:layout_width="259dp"
         android:layout_height="33dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernameProfile"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
