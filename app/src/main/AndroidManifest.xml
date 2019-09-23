@@ -12,8 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowRentDetails"></activity>
-        <activity android:name=".ShowDetailsHotels" />
+
+        <activity android:name=".signUp"/>
         <activity android:name=".homePage" />
         <activity android:name=".userProfile" />
         <activity android:name=".busShedule" />
@@ -26,15 +26,15 @@
         <activity android:name=".budgetPlan" />
         <activity android:name=".travelItemList" />
         <activity android:name=".travelItemDescription" />
-        <activity android:name=".hotel_description" />
-        <activity android:name=".resturant_description">
+        <activity android:name=".usersTravelItems" />
+        <activity android:name=".signIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".usersTravelItems" />
     </application>
 
 </manifest>

@@ -2,37 +2,28 @@ package com.example.travel360.model;
 
 public class User {
 
-    private String fname;
-    private String lname;
-    private String username;
+    private String name;
+    private String email;
     private Integer contact;
     private String pass1;
     private String pass2;
 
     public User() { }
 
-    public String getFname() {
-        return fname;
+    public String getName() {
+        return name;
     }
 
-    public void setFname(String fname) {
-        this.fname = fname;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLname() {
-        return lname;
+    public String getEmail() {
+        return email;
     }
 
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Integer getContact() {
