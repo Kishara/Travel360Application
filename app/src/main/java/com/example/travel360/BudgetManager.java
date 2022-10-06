@@ -74,6 +74,10 @@ public class BudgetManager {
         return budgetTotal;
     }
 
+    #public void setBudgetTotal(String budgetTotal) {
+    #    this.budgetTotal = budgetTotal;
+    #}
+    
     public void setBudgetTotal(String budgetTotal) {
         this.budgetTotal = budgetTotal;
     }
